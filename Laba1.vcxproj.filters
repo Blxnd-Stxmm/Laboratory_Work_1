@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\Two_Dimention_Arr">
+      <UniqueIdentifier>{e38f6dba-cefe-4228-bc8b-03d3b3ba328c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Reading_File">
+      <UniqueIdentifier>{b71442af-fee3-4e63-bd78-0332dec0f575}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\One_Dimention_Arr">
+      <UniqueIdentifier>{059fdfe0-c663-4320-9dfd-ca80d8963240}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Global_menu">
+      <UniqueIdentifier>{b82addd8-86fa-4ab4-a752-50ca584ac42f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Main">
+      <UniqueIdentifier>{2ce37344-5787-403f-a5fb-918eb0a8d525}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="menu_task1_and_sort.cpp">
+      <Filter>Исходные файлы\One_Dimention_Arr</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu_and_getvlaue_and_print.cpp">
+      <Filter>Исходные файлы\Two_Dimention_Arr</Filter>
+    </ClCompile>
+    <ClCompile Include="read_file.cpp">
+      <Filter>Исходные файлы\Reading_File</Filter>
+    </ClCompile>
+    <ClCompile Include="Global_menu.cpp">
+      <Filter>Исходные файлы\Global_menu</Filter>
+    </ClCompile>
+    <ClCompile Include="find_two_num.cpp">
+      <Filter>Исходные файлы\Reading_File</Filter>
+    </ClCompile>
+    <ClCompile Include="Array_and_menu.cpp">
+      <Filter>Исходные файлы\One_Dimention_Arr</Filter>
+    </ClCompile>
+    <ClCompile Include="initialization.cpp">
+      <Filter>Исходные файлы\One_Dimention_Arr</Filter>
+    </ClCompile>
+    <ClCompile Include="product_of_odd_num.cpp">
+      <Filter>Исходные файлы\One_Dimention_Arr</Filter>
+    </ClCompile>
+    <ClCompile Include="sum_of_elements.cpp">
+      <Filter>Исходные файлы\One_Dimention_Arr</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Исходные файлы\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="find_cols_with_0_elemets.cpp">
+      <Filter>Исходные файлы\Two_Dimention_Arr</Filter>
+    </ClCompile>
+    <ClCompile Include="find_row_with_longest_series.cpp">
+      <Filter>Исходные файлы\Two_Dimention_Arr</Filter>
+    </ClCompile>
+    <ClCompile Include="init_matrix.cpp">
+      <Filter>Исходные файлы\Two_Dimention_Arr</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Prototypes.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

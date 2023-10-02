@@ -1,0 +1,24 @@
+#include "Libraries.h"
+
+int initialization()
+{
+    int n = 0;
+    for (;;)
+    {
+        cout << "Enter size of array: ";
+        cin >> n;
+        cout << endl;
+        // Проверка на ошибку ввода
+        if (cin.fail() || (n <= 0) || (cin.get() != '\n'))
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Очистка буфера
+            cout << "Incorrect input. Please enter a valid positive integer." << endl << endl;
+        }
+        else
+        {
+            break;
+        }
+    }
+    return n;
+}
