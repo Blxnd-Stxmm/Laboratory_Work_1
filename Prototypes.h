@@ -32,6 +32,8 @@ bool find_row_with_longest_series(int** matrix, int cols, int rows); //функция н
 
 void print_menu();//печать меню выбора задания
 
+int print_matrix(int** matrix, int cols, int rows);//Функция напоминания пользователю его матрицы
+
 // Пртототипы для задания 3
 
 int read_file(); // Функция, читающая файл и вызывающая функцию ниже

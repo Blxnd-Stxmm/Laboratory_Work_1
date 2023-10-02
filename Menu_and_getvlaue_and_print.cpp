@@ -20,6 +20,7 @@ void menu_task2()
         cin >> variant;
 
         cout << endl;
+
         switch (variant)
         {
         case 1:
@@ -29,9 +30,12 @@ void menu_task2()
             find_row_with_longest_series(matrix, cols, rows);
             break;
         case 3:
+            print_matrix(matrix, cols,  rows);
+            break;
+        case 4:
             break;
         }
-    } while (variant != 3);
+    } while (variant != 4);
 
     for (int i = 0; i < cols; i++)
         delete matrix[i];
@@ -42,7 +46,7 @@ void menu_task2()
 
 int get_value()
 {
-    int value = 0;
+    int value;
 
     for (;;)
     {
@@ -63,5 +67,5 @@ int get_value()
 
 void print_menu()       //Печать меню программы
 {
-    cout << "\nPlease, choose what do you want to do:\n1. Find the number of columns containing at least one zero element and their coordinates\n2. Find the number of the row containing the longest series of identical elements and the number of such lines\n3. Exit.\n> ";
+    cout << "\nPlease, choose what do you want to do:\n1. Find the number of columns containing at least one zero element and their coordinates\n2. Find the number of the row containing the longest series of identical elements and the number of such lines\n3. Print Matrix\n4. Exit.\n> ";
 }

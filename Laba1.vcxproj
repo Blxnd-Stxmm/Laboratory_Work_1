@@ -135,6 +135,7 @@
     <ClCompile Include="Array_and_menu.cpp" />
     <ClCompile Include="initialization.cpp" />
     <ClCompile Include="init_matrix.cpp" />
+    <ClCompile Include="print_matrix.cpp" />
     <ClCompile Include="product_of_odd_num.cpp" />
     <ClCompile Include="sum_of_elements.cpp" />
     <ClCompile Include="menu_task1_and_sort.cpp" />
