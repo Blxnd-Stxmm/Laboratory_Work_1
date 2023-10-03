@@ -8,6 +8,12 @@ void global_menu(); // Фнукция меню для выбора задания
 
 int product_of_odd_num(int* arr, int n); // Функция нахождения произведения чётных элементов массива
 
+void display_prod_quantity_coordinates(int* arr, int n, int* coordinates); //Функция вывода результата первого задания
+
+int quantity(int n); // Функция счёта кол-ва элементов
+
+int* find_coordinates(int* arr, int n); //Функция нахождения координат
+
 int sum_of_elements(int* arr, int n); // Функция нахождения суммы элементов массива
 
 int* sort(int* arr, int n); // Функция сортировки массива
@@ -16,7 +22,9 @@ int initialization(); // Функция инициализации размера массива
 
 void menu_task1(int* arr, int n); // Функция меню для выбора из функций выше
 
-int init_Array_and_menu(); // Инициализация массива
+void init_Array_and_menu(); // Инициализация массива
+
+int print_matrix(int* arr, int n); //Функция напоминания пользователю его массива
 
 // Прототипы для задания 2
 

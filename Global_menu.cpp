@@ -6,7 +6,9 @@ void global_menu()
 
     while (true)   // Бесконечный цикл, использующий конструкцию switch case для выбора задания
     {
-        cout << "Hello, it's first laboratory work" << endl << "Please choose task" << endl << endl << "1 - Array" << endl << "2 - Matrix" << endl << "3 - File" << endl << "0 - Exit" << endl << endl;;
+        system("cls");
+        cout << "Hello, it's first laboratory work" << endl << "Please choose task" << endl << endl << "1 - Array" << endl << "2 - Matrix" << endl << "3 - File" << endl << "0 - Exit" << endl << endl;
+        cout << "> ";
         cin >> choice;
         cout << endl;
         

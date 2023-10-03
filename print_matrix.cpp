@@ -8,7 +8,6 @@ int print_matrix(int** matrix, int cols, int rows)
         {
             cout << "[" << matrix[i][j] << "]" << " ";
         }
-        cout << endl;
     }
     return 0;
 }

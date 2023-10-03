@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="display_prod_quan_coord.cpp" />
     <ClCompile Include="find_cols_with_0_elemets.cpp" />
     <ClCompile Include="find_row_with_longest_series.cpp" />
     <ClCompile Include="find_two_num.cpp" />
@@ -135,8 +136,9 @@
     <ClCompile Include="Array_and_menu.cpp" />
     <ClCompile Include="initialization.cpp" />
     <ClCompile Include="init_matrix.cpp" />
+    <ClCompile Include="print_array.cpp" />
     <ClCompile Include="print_matrix.cpp" />
-    <ClCompile Include="product_of_odd_num.cpp" />
+    <ClCompile Include="product_quan_coord.cpp" />
     <ClCompile Include="sum_of_elements.cpp" />
     <ClCompile Include="menu_task1_and_sort.cpp" />
     <ClCompile Include="Menu_and_getvlaue_and_print.cpp" />

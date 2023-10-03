@@ -4,19 +4,25 @@ void menu_task1(int* arr, int n)
 {
     int* sortedArr;
     char choice;
+    int* coordinates;
 
     while (true) // Бесконечный цикл, использующий конструкцию switch case для выбора операции
     {
-        cout << "Please choose what do you want" << endl << endl << "1 - Product of odd numbers" << endl << "2 - Summ of elements of array" << endl << "3 - Sort of array" << endl << "0 - Exit" << endl << endl;;
+        cout << "Please choose what do you want" << endl << endl << "1 - Product of odd numbers" << endl << "2 - Summ of elements of array" << endl << "3 - Sort of array" << endl << "0 - Exit" << endl << endl;
+        cout << "> ";
         cin >> choice;
 
         cout << endl;
         system("cls");
 
+        print_matrix(arr, n);
+
         switch (choice)
         {
         case '1':
-            product_of_odd_num(arr, n);
+            coordinates = find_coordinates(arr, n);
+            display_prod_quantity_coordinates(arr, n, coordinates);
+            delete[] coordinates;
             break;
         case '2':
             sum_of_elements(arr, n);
