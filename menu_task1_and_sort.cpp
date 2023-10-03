@@ -7,7 +7,7 @@ void menu_task1(int* arr, int n)
 
     while (true) // Бесконечный цикл, использующий конструкцию switch case для выбора операции
     {
-        cout << "Please choose what do you want" << endl << "1 - Product of odd numbers" << endl << "2 - Summ of elements of array" << endl << "3 - Sort of array" << endl << "0 - Exit" << endl << endl;;
+        cout << "Please choose what do you want" << endl << endl << "1 - Product of odd numbers" << endl << "2 - Summ of elements of array" << endl << "3 - Sort of array" << endl << "0 - Exit" << endl << endl;;
         cin >> choice;
 
         cout << endl;
@@ -42,25 +42,24 @@ void menu_task1(int* arr, int n)
 
 int* sort(int* arr, int n)
 {
-    int coutner = 0;
-    int* arr2 = new int[n];
+        int coutner = 0;
+        int* arr2 = new int[n];
 
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] >= 0)
+        for (int i = 0; i < n; i++)
         {
-            arr2[coutner] = arr[i];
-            coutner++;
+            if (arr[i] >= 0)
+            {
+                arr2[coutner] = arr[i];
+                coutner++;
+            }
         }
-    }
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] < 0)
+        for (int i = 0; i < n; i++)
         {
-            arr2[coutner] = arr[i];
-            coutner++;
+            if (arr[i] < 0)
+            {
+                arr2[coutner] = arr[i];
+                coutner++;
+            }
         }
-    }
-
-    return arr2;
+        return arr2;
 }

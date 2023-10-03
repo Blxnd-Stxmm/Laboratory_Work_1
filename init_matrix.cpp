@@ -10,7 +10,7 @@ int** init_matrix(int cols, int rows)
     {
         for (int j = 0; j < cols; j++)
         {
-            cout << "Enter element " << "[" << i << "]" << "[" << j << "]\n> ";
+            cout << "Enter elements of matrix " << "[" << i << "]" << "[" << j << "]" << endl;
             matrix[i][j] = get_value();
         }
     }

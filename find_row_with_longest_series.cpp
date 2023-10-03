@@ -1,6 +1,6 @@
 #include "Libraries.h"
 
-bool find_row_with_longest_series(int** matrix, int cols, int rows)
+int find_row_with_longest_series(int** matrix, int cols, int rows)
 {
     int max_series = 1;
     int max_series_count = 0;
@@ -13,11 +13,11 @@ bool find_row_with_longest_series(int** matrix, int cols, int rows)
 
         for (int j = 0; j < cols - 1; j++)
         {
-            if (matrix[j][i] == matrix[j + 1][i])   // Если текущая серия превышает максимальную
+            if (matrix[i][j] == matrix[i][j + 1])   // Если текущая серия превышает максимальную
             {
                 current_series++;
 
-                if (current_series > max_series)
+                if (current_series > max_series && i != current_row)
                 {
                     max_series = current_series;
                     max_series_count = 1;   // Сбрасываем счетчик строк с максимальной серией
@@ -33,10 +33,18 @@ bool find_row_with_longest_series(int** matrix, int cols, int rows)
         }
     }
 
+    display_maxseries_and_coordinates(matrix, cols, rows, max_series, max_series_count, current_row);
+
+    return 0;
+}
+
+void display_maxseries_and_coordinates(int** matrix, int cols, int rows, int max_series, int max_series_count, int current_row)
+{
+    int current_series = 1;
+
     if (max_series == 1)
     {
         cout << "There is no rows with series of identical elements in this matrix\n";
-        return false;
     }
     else
     {
@@ -51,7 +59,7 @@ bool find_row_with_longest_series(int** matrix, int cols, int rows)
 
             for (int j = 0; j < cols - 1; j++)
             {
-                if (matrix[j][i] == matrix[j + 1][i])
+                if (matrix[i][j] == matrix[i][j + 1])
                 {
                     current_series++;
                     if (current_series == max_series && i != current_row)
@@ -67,6 +75,5 @@ bool find_row_with_longest_series(int** matrix, int cols, int rows)
             }
         }
         cout << endl;
-        return true;
     }
 }

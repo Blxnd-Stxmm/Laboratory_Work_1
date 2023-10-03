@@ -22,15 +22,19 @@ int init_Array_and_menu(); // Инициализация массива
 
 int** init_matrix(int cols, int rows); // Функция создания двумерного динамичесокго массива
 
-int get_value();//функция вводаи проверки корректности значений
+int get_value(); //Функция вводаи проверки корректности значений
 
 void menu_task2(); // Функция вызова остальных функций
 
-bool find_cols_with_0_elemets(int** matrix, int cols, int rows);//функция нахождения столбцов с нулевым элементом
+int find_cols_with_0_elemets(int** matrix, int cols, int rows); //Функция нахождения столбцов с нулевым элементом
 
-bool find_row_with_longest_series(int** matrix, int cols, int rows); //функция нахождения строк с самой длинной серией одинаковых символов
+void display_cols_with_0_elemets(int* coordinates, int amount); //Функция вывода на экран результата работы функции выше
 
-void print_menu();//печать меню выбора задания
+int find_row_with_longest_series(int** matrix, int cols, int rows); //Функция нахождения строк с самой длинной серией одинаковых символов
+
+void display_maxseries_and_coordinates(int** matrix, int cols, int rows, int max_series, int max_series_count, int current_row);
+
+void print_menu(); //Печать меню выбора задания
 
 int print_matrix(int** matrix, int cols, int rows);//Функция напоминания пользователю его матрицы
 
