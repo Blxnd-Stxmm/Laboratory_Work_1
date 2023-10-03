@@ -5,7 +5,6 @@ int initialization()
     int n = 0;
     for (;;)
     {
-        cout << "Enter size of array: ";
         cin >> n;
         cout << endl;
         // Проверка на ошибку ввода

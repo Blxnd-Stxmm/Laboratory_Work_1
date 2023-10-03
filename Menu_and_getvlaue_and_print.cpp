@@ -4,11 +4,11 @@ void menu_task2()
 {
     int cols = 0, rows = 0;
 
-    cout << "Enter the number of columns and rows:";    //¬вод и проверка на корректность размерности матрицы
-    cout << "\nColumns: ";
-    cols = get_value();
+    cout << "Enter the number of rows and columns:" << endl;    //¬вод и проверка на корректность размерности матрицы
     cout << "Rows: ";
     rows = get_value();
+    cout << "Columns: ";
+    cols = get_value();
     cout << endl;
 
     int** matrix = init_matrix(cols, rows);
