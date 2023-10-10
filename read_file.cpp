@@ -1,6 +1,6 @@
 #include "Libraries.h"
 
-int read_file()
+void read_file()
 {
     char task3_file[] = "task3_file.txt";
     char* arr_file = NULL;
@@ -14,7 +14,7 @@ int read_file()
     if (!fin.is_open())
     {
         cout << "File opening error" << endl;  // Ошибка чтения файла
-        return 1;
+        return;
     }
 
     // Определение размера файла
@@ -26,10 +26,12 @@ int read_file()
     {
         cout << "File is empty" << endl;
         fin.close();
-        return 1;
+        return;
     }
 
     arr_file = new char[size + 1];
+
+    cout << "Source text: ";
 
     while (fin.get(ch)) // Перегоняем символы из файла в массив char
     {
@@ -39,15 +41,10 @@ int read_file()
     }
 
     cout << endl << endl;
-
+    
     find_two_num(size, arr_file);
 
     fin.close();
 
     delete[] arr_file;
-
-    return 0;
 }
-
-
-

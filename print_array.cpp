@@ -1,6 +1,6 @@
 #include "Libraries.h"
 
-int print_matrix(int* arr, int n)
+int print_array(int* arr, int n)
 {
     for (int i = 0; i < n; i++)      //¬вод значений двухмерного массива
     {

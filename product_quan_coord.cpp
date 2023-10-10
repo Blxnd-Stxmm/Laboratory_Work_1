@@ -59,7 +59,7 @@ int* find_coordinates(int* arr, int n)
     {
         if ((i + 1) % 2 == 0)
         {
-            coordinates[index] = arr[i];
+            coordinates[index] = i;
             index++;
         }
     }

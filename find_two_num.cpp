@@ -4,12 +4,14 @@ char find_two_num(int size, char* arr_file)
 {
     bool isInsideTwoDigitNumber = false; // ‘лаг, указывающий, что мы находимс€ внутри двузначного числа
     int currentNumber = 0;
+    int digit = 0;
+    bool havenum = false;
 
     for (int i = 0; i < size; i++)
     {
         if (isdigit(arr_file[i]))
         {
-            int digit = arr_file[i] - '0';
+            digit = arr_file[i] - '0';
 
             if (isInsideTwoDigitNumber)
             {
@@ -26,6 +28,7 @@ char find_two_num(int size, char* arr_file)
             if (currentNumber >= 10 && currentNumber <= 99)
             {
                 cout << "Two-digit number: " << currentNumber << endl;
+                havenum = true;
             }
             isInsideTwoDigitNumber = false; // —брасываем флаг при нахождении пробела
         }
@@ -33,6 +36,11 @@ char find_two_num(int size, char* arr_file)
         {
             isInsideTwoDigitNumber = false; // —брасываем флаг при нахождении любого другого символа
         }
+    }
+
+    if (havenum == false)
+    {
+        cout << "Not two-digit numbers" << endl;
     }
 
     cout << endl;

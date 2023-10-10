@@ -1,49 +1,75 @@
-#include "Libraries.h"
+п»ї#include "Libraries.h"
 
-int sum_of_elements(int* arr, int n)
+int* find_null_elements(int* arr, int n)
 {
-    int sum = 0, null1 = -1, null2 = -1;
-    bool foundZero = false; // Флаг для отслеживания наличия хотя бы одного нулевого элемента
+    int* coordinates = new int[2];
+    coordinates[0] = -1;
+    coordinates[1] = -1;
 
     for (int i = 0; i < n; i++)
     {
         if (arr[i] == 0)
         {
-            if (!foundZero) // Если это первый нулевой элемент
-            {
-                foundZero = true;
-                null1 = i;
-            }
-            else // Если это второй нулевой элемент
-            {
-                null2 = i;
-                if (null2 == null1 + 1)
-                {
-                    cout << "Sum of elements can't be found between neighboring numbers" << endl << endl;
-                    return 0;
-                }
-                break; // Найдены оба нулевых элемента, выходим из цикла
-            }
+            coordinates[0] = i;
+            break;
         }
     }
 
-    if (!foundZero)
+    for (int i = n-1; i >= 0; i--)
     {
-        cout << "Null elements are missing" << endl << endl;  // Если нету нулевых элементов
-        return 0;
+        if (arr[i] == 0)
+        {
+            coordinates[1] = i;
+            break;
+        }
     }
 
-    if (null2 == -1) // Если нету второго нулевого элемента
-    {
-        cout << "The operation was not performed because the second null element is missing" << endl << endl;
-        return 0;
-    }
+    return coordinates;
+}
 
-    for (int i = null1 + 1; i < null2; i++)
+int calculate_sum(int* arr, int* coordinates_sum)
+{
+    int sum = 0;
+
+    for (int i = coordinates_sum[0] + 1; i < coordinates_sum[1]; i++)
     {
         sum += arr[i];
     }
 
-    cout << "Sum of elements = " << sum << endl << endl;
-    return 0;
+    return sum;
 }
+
+void print_result(int sum, int* coordinates_sum, int n)
+{
+    if (n == 1)
+    {
+        cout << "Sum of elements can't be found between 1 element " << endl << endl;
+        return;
+    }
+
+    if (coordinates_sum[1] == coordinates_sum[0] + 1)
+    {
+        cout << "Sum of elements can't be found between neighboring numbers" << endl << endl;
+        return;
+    }
+
+    if (coordinates_sum[0] == -1 && coordinates_sum[1] == -1)
+    {
+        cout << "Null elements are missing" << endl << endl;
+        return;
+    }
+
+    if (coordinates_sum[1] == coordinates_sum[0])
+    {
+        cout << "The operation was not performed because the second null element is missing" << endl << endl;
+        return;
+    }
+
+    cout << "Sum of elements = " << sum << endl << endl;
+
+    if (coordinates_sum[0] != -1 && coordinates_sum[1] != -1)
+    {
+        cout << "Position null elements: " << coordinates_sum[0] << " " << coordinates_sum[1] << endl << endl;
+    }
+}
+

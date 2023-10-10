@@ -69,14 +69,14 @@
     <ClCompile Include="init_matrix.cpp">
       <Filter>Исходные файлы\Two_Dimention_Arr</Filter>
     </ClCompile>
-    <ClCompile Include="print_matrix.cpp">
-      <Filter>Исходные файлы\Two_Dimention_Arr</Filter>
-    </ClCompile>
     <ClCompile Include="print_array.cpp">
       <Filter>Исходные файлы\One_Dimention_Arr</Filter>
     </ClCompile>
     <ClCompile Include="display_prod_quan_coord.cpp">
       <Filter>Исходные файлы\One_Dimention_Arr</Filter>
+    </ClCompile>
+    <ClCompile Include="display_results_function.cpp">
+      <Filter>Исходные файлы\Two_Dimention_Arr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

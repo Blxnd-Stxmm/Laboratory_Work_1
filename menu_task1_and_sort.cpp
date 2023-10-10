@@ -2,9 +2,11 @@
 
 void menu_task1(int* arr, int n)
 {
-    int* sortedArr;
+    int* sortedArr = NULL;
     char choice;
     int* coordinates;
+    int* coordinates_sum;
+    int sum = 0;
 
     while (true) // Бесконечный цикл, использующий конструкцию switch case для выбора операции
     {
@@ -15,7 +17,7 @@ void menu_task1(int* arr, int n)
         cout << endl;
         system("cls");
 
-        print_matrix(arr, n);
+        print_array(arr, n);
 
         switch (choice)
         {
@@ -25,7 +27,10 @@ void menu_task1(int* arr, int n)
             delete[] coordinates;
             break;
         case '2':
-            sum_of_elements(arr, n);
+            coordinates_sum = find_null_elements(arr, n);
+            sum = calculate_sum(arr, coordinates_sum);
+            print_result(sum, coordinates_sum, n);
+            delete[] coordinates_sum;
             break;
         case '3':
             sortedArr = sort(arr, n);
@@ -33,15 +38,16 @@ void menu_task1(int* arr, int n)
             cout << "Sorted array: ";
             for (int i = 0; i < n; i++)
             {
-                cout << sortedArr[i] << " ";
+                cout << "[" << sortedArr[i] << "]" << " ";
             }
-            cout << endl;
+            cout << endl << endl;
             delete[] sortedArr;
             break;
         case '0':
+            system("cls");
             return;
         default:
-            cout << "Invalid choice. Try again." << endl;
+            cout << "Invalid choice. Try again." << endl << endl;
         }
     }
 }

@@ -8,7 +8,7 @@ int initialization()
         cin >> n;
         cout << endl;
         // Проверка на ошибку ввода
-        if (cin.fail() || (n <= 0) || (cin.get() != '\n'))
+        if (cin.fail() || (cin.get() != '\n'))
         {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Очистка буфера

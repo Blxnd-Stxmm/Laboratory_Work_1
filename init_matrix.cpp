@@ -10,14 +10,16 @@ int** init_matrix(int cols, int rows)
     {
         for (int j = 0; j < cols; j++)
         {
-            cout << "Enter elements of matrix " << "[" << i << "]" << "[" << j << "]" << endl << "> ";
-            matrix[i][j] = get_value();
+            cout << "Enter element " << "[" << i << "]" << "[" << j << "]\n> ";
+            matrix[i][j] = initialization();
         }
     }
 
     system("cls");
 
-    cout << "\nMatrix with " << cols << " columns and " << rows << " rows created\n";
+    cout << "Matrix with " << cols << " columns and " << rows << " rows created\n" << endl;
+    print_matrix(matrix, cols, rows);
+    cout << endl;
 
     return matrix;
 }
