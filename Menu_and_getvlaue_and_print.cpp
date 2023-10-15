@@ -59,8 +59,6 @@ void menu_task2()
     for (int i = 0; i < cols; i++)
         delete matrix[i];
     delete[] matrix;
-
-    return;
 }
 
 int get_value()
